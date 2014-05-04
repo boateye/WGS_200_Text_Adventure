@@ -70,6 +70,7 @@ def start():
         print avatar
         print ""
 #player chooses avatar
+# might wanna make this a function, so that it loops correctly when an invalid command is inputted.
     choice = raw_input("Who do you choose?")
     process(choice)
     global Toon
@@ -111,8 +112,6 @@ def sit1():
         print ""
     choice = raw_input("What do you say?")
     process(choice)
-    print choice
-    print Toon
 #TSwift Responses
     if choice == "1" and Toon == "Taylor Swift":
         print "I agree. Many troops, like yourself, excel in the supportive roles. Not everyone is fit for combat."
@@ -145,3 +144,5 @@ def sit1():
 
 #Game starts here
 start()
+
+
