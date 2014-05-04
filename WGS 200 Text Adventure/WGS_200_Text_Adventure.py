@@ -28,21 +28,19 @@ sit1Choices= [
               "3. I've seen Tropic Thunder, and I know I'm better prepared than THOSE guys!"]
 
 # Text String Variables
-Toon = 0
+Toon = ""
 choice = ""
 
 pregame = """Welcome to our WGS 200 Creative Project! You are about to embark on a "choose your own adventure" style game. There are no right or wrong descisions. Only choices, and consequences. If you're lost, just type 'help'. Enjoy! """
 pregame_paragraph = textwrap.wrap(pregame, width = 70)
 
-introduction = """You're lying in your bed. It's a beautiful morning in San Francisco; the birds are chirping, the sun is shining, and you survived last night's all-nighter with nary a hangover. Your cell rings, and it's a call from some government number. You answer. A recorded voice says, "Hello %s, this is the US Military. You have been selected in the most recent draft as a candidate to serve your country. Please report to your nearest deafting outpost for your pre-enlistment interview, ASAP." Reluctantly, you rise out of bed. You find the nearest outpost online, and head there after your morning routine. You are greeted at the outpost by a decorated US soldier. "Hello %s, I am Commander Sheperd. Please have a seat." """ % (Toon, Toon)
-introduction_paragraph = textwrap.wrap(introduction, width = 70)
 
 # a function that defines how the game process input stored as the variable: 'command'
 def process(command):
     str(command)
     command.lower()
     if command == "help":
-            print "To make a descision, just enter the corresponding number next to your choice"
+            print "To make a decision, just enter the corresponding number next to your choice"
             print "Type 'about' if you want to know who helped to make this project!"
             input()
     elif command == "about":
@@ -52,7 +50,7 @@ def process(command):
         return command
     else:
         print "%s is not a valid command" % command
-        hinput()
+        input()
 
 #a function that asks the user for input
 
@@ -74,6 +72,7 @@ def start():
 #player chooses avatar
     choice = raw_input("Who do you choose?")
     process(choice)
+    global Toon
     if choice == "1":
         print ""
         print "Greetings Ms. Swift!"
@@ -99,7 +98,8 @@ def start():
 
 #Introduction to first situation
 def sit1():
-
+    introduction = """You're lying in your bed. It's a beautiful morning in San Francisco; the birds are chirping, the sun is shining, and you survived last night's all-nighter with nary a hangover. Your cell rings, and it's a call from some government number. You answer. A recorded voice says, "Hello %s, this is the US Military. You have been selected in the most recent draft as a candidate to serve your country. Please report to your nearest deafting outpost for your pre-enlistment interview, ASAP." Reluctantly, you rise out of bed. You find the nearest outpost online, and head there after your morning routine. You are greeted at the outpost by a decorated US soldier. "Greetings %s, I am Commander Sheperd. Please have a seat." """ % (Toon, Toon)
+    introduction_paragraph = textwrap.wrap(introduction, width = 70)
     for introLine in introduction_paragraph:
         print introLine
     print ""
@@ -115,7 +115,7 @@ def sit1():
     print Toon
 #TSwift Responses
     if choice == "1" and Toon == "Taylor Swift":
-        print "I agree. Many of troops like yourself excel in the supportive roles. Not everyone is fit for combat."
+        print "I agree. Many troops, like yourself, excel in the supportive roles. Not everyone is fit for combat."
         print "But I think that I'd be great in combat, too! I didn't know that was an option..."
         print "I don't think that's such a good idea."
         print "Why?"
