@@ -50,24 +50,32 @@ def process(command):
     str(command)
     command.lower()
     if command == "help":
-            print "To make a decision, just enter the corresponding number next to your choice"
-            print "Type 'about' if you want to know who helped to make this project!"
-            input()
+        print ""
+        print "To make a decision, just enter the corresponding number next to your choice."
+        print""
+        print "Type 'about' if you want to know who helped to make this project!"
+        print""
+        print "Type 'reset' to start over"
+        print""
+        process(command)
     elif command == "about":
         for person in credits:
             print "%s : %s" % (person, credits[person])
-    elif len(command) >= 1:
+    elif command == "reset":
+        start()
+    elif len(command) >= 0:
         return command
     else:
         print "%s is not a valid command" % command
-        input()
+        process(command)
+        #input()
 
-#a function that asks the user for input
+#a function that asks the user for inputv (i don't think this is necesary, since i created a  process(command) function
 
-def input():
-    command = raw_input("What is your Decision?")
-    process(command)
-    return command
+#def input():
+#    #command = raw_input(">")
+#    process(command)
+#    return command
 
 #defines a function that will initialize the game
 
@@ -138,26 +146,6 @@ def sit1():
        print ""
        wrap(""""Because, you'd be a distraction for your fellow troops." """) 
        print ""
-
-#        print """ 
-#"I agree. Many troops, like yourself, excel in the supportive roles. Not everyone is fit for combat." 
-        
-#"But I think that I'd be great in combat, too! I didn't know that was an option..."
-
-#"I don't think that's such a good idea."
-
-#"Why?" 
-
-#"Because, you'd be a distraction for your fellow troops." """
-        
-        #print ""
-        #print """"But I think that I'd be great in combat, too! I didn't know that was an option..." """
-        #print ""
-        #print """"I don't think that's such a good idea." """
-        #print ""
-        #print """"Why?" """
-        #print ""
-        #print """"Because, you'd be a distraction for your fellow troops." """
     elif choice == "2" and Toon == "Taylor Swift":
         print """"Pretty much. Did your brother, teach you how to play those games?" """
         print """"I'm an only child." """
