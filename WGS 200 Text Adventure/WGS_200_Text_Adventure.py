@@ -31,7 +31,7 @@ sit1Choices= [
 Toon = 0
 choice = ""
 
-pregame = """Welcome to our WGS 2000 Creative Project! You are about to embark on a "choose your own adventure" style game. There are no right or wrong descisions. Only choices, and consequences. If you're lost, just type 'help'. Enjoy! """
+pregame = """Welcome to our WGS 200 Creative Project! You are about to embark on a "choose your own adventure" style game. There are no right or wrong descisions. Only choices, and consequences. If you're lost, just type 'help'. Enjoy! """
 pregame_paragraph = textwrap.wrap(pregame, width = 70)
 
 introduction = """You're lying in your bed. It's a beautiful morning in San Francisco; the birds are chirping, the sun is shining, and you survived last night's all-nighter with nary a hangover. Your cell rings, and it's a call from some government number. You answer. A recorded voice says, "Hello %s, this is the US Military. You have been selected in the most recent draft as a candidate to serve your country. Please report to your nearest deafting outpost for your pre-enlistment interview, ASAP." Reluctantly, you rise out of bed. You find the nearest outpost online, and head there after your morning routine. You are greeted at the outpost by a decorated US soldier. "Hello %s, I am Commander Sheperd. Please have a seat." """ % (Toon, Toon)
