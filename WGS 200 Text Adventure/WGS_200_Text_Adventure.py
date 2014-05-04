@@ -34,6 +34,16 @@ choice = ""
 pregame = """Welcome to our WGS 200 Creative Project! You are about to embark on a "choose your own adventure" style game. There are no right or wrong descisions. Only choices, and consequences. If you're lost, just type 'help'. Enjoy! """
 pregame_paragraph = textwrap.wrap(pregame, width = 70)
 
+# a function that will make wrapping an individual line easier
+
+def wrap(string):
+    str(string)
+    x = string
+    
+    y = textwrap.wrap(x)
+    
+    for z in y:
+        print z
 
 # a function that defines how the game process input stored as the variable: 'command'
 def process(command):
@@ -55,7 +65,7 @@ def process(command):
 #a function that asks the user for input
 
 def input():
-    command = raw_input("What do you want to do?")
+    command = raw_input("What is your Decision?")
     process(command)
     return command
 
@@ -117,15 +127,37 @@ def sit1():
     process(choice)
 #TSwift Responses
     if choice == "1" and Toon == "Taylor Swift":
-        print """ "I agree. Many troops, like yourself, excel in the supportive roles. Not everyone is fit for combat." """
-        print ""
-        print """"But I think that I'd be great in combat, too! I didn't know that was an option..." """
-        print ""
-        print """"I don't think that's such a good idea." """
-        print ""
-        print """"Why?" """
-        print ""
-        print """"Because, you'd be a distraction for your fellow troops." """
+       print ""
+       wrap(""""I agree. Many troops, like yourself, excel in the supportive roles. Not everyone is fit for combat, you know," Sheperd states.""")
+       print ""
+       wrap(""""But I think that I'd be great in combat, too! I didn't know that was an option..." you retort.""")
+       print ""
+       wrap(""""I don't think that's such a good idea." """)
+       print ""
+       wrap(""""Why?" """) 
+       print ""
+       wrap(""""Because, you'd be a distraction for your fellow troops." """) 
+       print ""
+
+#        print """ 
+#"I agree. Many troops, like yourself, excel in the supportive roles. Not everyone is fit for combat." 
+        
+#"But I think that I'd be great in combat, too! I didn't know that was an option..."
+
+#"I don't think that's such a good idea."
+
+#"Why?" 
+
+#"Because, you'd be a distraction for your fellow troops." """
+        
+        #print ""
+        #print """"But I think that I'd be great in combat, too! I didn't know that was an option..." """
+        #print ""
+        #print """"I don't think that's such a good idea." """
+        #print ""
+        #print """"Why?" """
+        #print ""
+        #print """"Because, you'd be a distraction for your fellow troops." """
     elif choice == "2" and Toon == "Taylor Swift":
         print """"Pretty much. Did your brother, teach you how to play those games?" """
         print """"I'm an only child." """
