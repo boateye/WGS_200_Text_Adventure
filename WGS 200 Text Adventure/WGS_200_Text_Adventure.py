@@ -59,7 +59,8 @@ def input():
     process(command)
     return command
 
-#defines a function that will greet the user
+#defines a function that will initialize the game
+
 def start():
     for pregameLine in pregame_paragraph:
         print pregameLine  
@@ -69,8 +70,10 @@ def start():
     for avatar in list_of_avatars:
         print avatar
         print ""
-#player chooses avatar
-# might wanna make this a function, so that it loops correctly when an invalid command is inputted.
+    chooseavatar()
+
+#defines a fucntion for choosing an avatar
+def chooseavatar():
     choice = raw_input("Who do you choose?")
     process(choice)
     global Toon
@@ -94,7 +97,7 @@ def start():
         sit1()
     else:
         print "That is not a valid choice."
-        choice = raw_input("Who do you choose?")
+        chooseavatar()
 
 
 #Introduction to first situation
@@ -114,23 +117,27 @@ def sit1():
     process(choice)
 #TSwift Responses
     if choice == "1" and Toon == "Taylor Swift":
-        print "I agree. Many troops, like yourself, excel in the supportive roles. Not everyone is fit for combat."
-        print "But I think that I'd be great in combat, too! I didn't know that was an option..."
-        print "I don't think that's such a good idea."
-        print "Why?"
-        print "Because, you'd be a distraction for your fellow troops."
+        print """ "I agree. Many troops, like yourself, excel in the supportive roles. Not everyone is fit for combat." """
+        print ""
+        print """"But I think that I'd be great in combat, too! I didn't know that was an option..." """
+        print ""
+        print """"I don't think that's such a good idea." """
+        print ""
+        print """"Why?" """
+        print ""
+        print """"Because, you'd be a distraction for your fellow troops." """
     elif choice == "2" and Toon == "Taylor Swift":
-        print "Pretty much. Did your brother, teach you how to play those games?"
-        print "I'm an only child."
-        print "Father, then?"
-        print "I taught myself"
-        print "Good for you!"
+        print """"Pretty much. Did your brother, teach you how to play those games?" """
+        print """"I'm an only child." """
+        print """"Father, then?" """
+        print """"I taught myself" """
+        print """"Good for you!" """
     elif choice == "3" and Toon == "Taylor Swift":
-        print "Everyone is more prepared than those men."
-        print "Also, Robert Downey Jr. looked great in that film. then again, does ne ever look bad?"
-        print "You're right, he's one handsome man. Anyway, this is not Vietname, nor is it a movie about war. This is a real war, and I don't think that there you'd be a good fit."
-        print "But I can be the dude playing the dude, disguised as another dude!"
-        print "Please leave, Ms. Swift. You're just unfit for this war."
+        print """"Everyone is more prepared than those men." """
+        print """"Also, Robert Downey Jr. looked great in that film. then again, does ne ever look bad?" """
+        print """"You're right, he's one handsome man. Anyway, this is not Vietname, nor is it a movie about war. This is a real war, and I don't think that there you'd be a good fit." """
+        print """"But I can be the dude playing the dude, disguised as another dude!" """
+        print """"Please leave, Ms. Swift. You're just unfit for this war." """
 #CEvans Responses
     elif choice == 1 and Toon == "Chris Evans":
         print "And you probably would. However, don't you think that you'd be a better fit on the front lines?"
