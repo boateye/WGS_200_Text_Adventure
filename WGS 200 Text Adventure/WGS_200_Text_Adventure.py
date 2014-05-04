@@ -147,17 +147,28 @@ def sit1():
        wrap(""""Because, you'd be a distraction for your fellow troops." """) 
        print ""
     elif choice == "2" and Toon == "Taylor Swift":
-        print """"Pretty much. Did your brother, teach you how to play those games?" """
-        print """"I'm an only child." """
-        print """"Father, then?" """
-        print """"I taught myself" """
-        print """"Good for you!" """
+        print""
+        print """"Pretty much. Did your brother teach you how to play those games?" """
+        print ""
+        print """"I don't have a brother. I'm an only child." """
+        print ""
+        print """"Friend, then?" """
+        print ""
+        print """ None of my friends played before I introduced them." """
+        print ""
+        print """I find that hard to believe, but anyway..." """
+        print""
     elif choice == "3" and Toon == "Taylor Swift":
-        print """"Everyone is more prepared than those men." """
-        print """"Also, Robert Downey Jr. looked great in that film. then again, does ne ever look bad?" """
-        print """"You're right, he's one handsome man. Anyway, this is not Vietname, nor is it a movie about war. This is a real war, and I don't think that there you'd be a good fit." """
-        print """"But I can be the dude playing the dude, disguised as another dude!" """
-        print """"Please leave, Ms. Swift. You're just unfit for this war." """
+        wrap(""""Everyone is more prepared than those men." """)
+        print""
+        wrap(""""Also, Robert Downey Jr. looked great in that film. then again, does he ever look bad?" """)
+        print ""
+        wrap(""""You're right, he's one handsome man. Anyway, this is not Vietname, nor is it a movie about war. This is a real war, and I don't think that there you'd be a good fit." """)
+        print ""
+        wrap(""""But I can be the dude playing the dude, disguised as another dude!" """)
+        print ""
+        wrap(""""Please leave, Ms. Swift. You're just unfit for this war." """)
+        print ""
 #CEvans Responses
     elif choice == 1 and Toon == "Chris Evans":
         print "And you probably would. However, don't you think that you'd be a better fit on the front lines?"
