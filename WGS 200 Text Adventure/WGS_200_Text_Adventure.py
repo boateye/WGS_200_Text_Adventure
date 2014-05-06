@@ -1,5 +1,5 @@
 import textwrap
-
+import time
 # Variables, dictionaries, lists, and text strings pertinent to this project
 
 # Dictionaries
@@ -86,6 +86,7 @@ def start():
     for pregameLine in pregame_paragraph:
         wrap(pregameLine)  
     print ""
+    time.sleep(7)
     print "Before we start, please choose your character:"
     print ""
     for avatar in list_of_avatars:
