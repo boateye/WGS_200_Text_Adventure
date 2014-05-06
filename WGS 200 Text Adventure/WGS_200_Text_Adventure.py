@@ -1,11 +1,12 @@
 import textwrap
 import time
+import os
 # Variables, dictionaries, lists, and text strings pertinent to this project
 
 # Dictionaries
 credits = {
     'Jordan Johnson' : 'Programmer / Philogynist',
-    'Miriam Gonzales' : 'Writer / Misspeller',
+    'Miriam Gonzales' : 'Writer / Misspeller / Rabbit Soup Connoisseur',
 	'Sirena Bevilaqua' : 'Writer / Mermaid',
 	'Sandra F' : 'Writer / Idea Woman',
 	'Sam Burke' : 'Writer / Friendly Neighborhood Bad-ass'}
@@ -18,8 +19,8 @@ avatars = {
 # Lists
 list_of_avatars = [
            '1 : Taylor Swift',
-           '2 : Chris Evans',
-           '3 : Boy George']
+           '2 : Chris Evans']
+#           '3 : Boy George']
 
 # Choices are going to be universal in all situations. However, responses to said choices will differnt depending on the selected toon. This should cut down on development time, and provice a deeper message.
 sit1Choices = [
@@ -54,17 +55,17 @@ def process(command):
     command.lower()
     if command == "help":
         print ""
-        print "To make a decision, just enter the corresponding number next to your choice."
+        wrap("To make a decision, just type the corresponding number next to your choice, and then press enter.")
         print""
-        print "Type 'about' if you want to know who helped to make this project!"
+        wrap("Type 'about' if you want to know who helped to make this project!")
         print""
-        print "Type 'reset' to start over"
+        wrap("Type 'reset' to start over")
         print""
-        process(command)
     elif command == "about":
         for person in credits:
             print "%s : %s" % (person, credits[person])
     elif command == "reset":
+        os.system("cls")
         start()
     elif len(command) >= 0:
         return command
@@ -86,7 +87,8 @@ def start():
     for pregameLine in pregame_paragraph:
         wrap(pregameLine)  
     print ""
-    time.sleep(7)
+    #time.sleep(7)
+    pause = raw_input("Press ENTER to continue")
     print "Before we start, please choose your character:"
     print ""
     for avatar in list_of_avatars:
@@ -96,7 +98,7 @@ def start():
 
 #defines a fucntion for choosing an avatar
 def chooseavatar():
-    choice = raw_input("Who do you choose?")
+    choice = raw_input(">")
     process(choice)
     global Toon
     if choice == "1":
@@ -111,12 +113,12 @@ def chooseavatar():
         print ""
         Toon = "Chris Evans"
         sit1()
-    elif choice == "3":
-        print ""
-        print "How do you do, Boy George!"
-        print ""
-        Toon = "Boy George"
-        sit1()
+#    elif choice == "3":
+#        print ""
+#        print "How do you do, Boy George!"
+#        print ""
+#        Toon = "Boy George"
+#        sit1()
     else:
         print "That is not a valid choice."
         chooseavatar()
@@ -130,12 +132,13 @@ def sit1():
         print introLine
     print ""
     print """ "So, how do you see yourself serving your country?" Commander Sheperd asks"""
+    pause = raw_input("Press ENTER to Continue")
 #First Descision
     for sit1choice in sit1Choices:
         print ""
         print sit1choice
         print ""
-    choice = raw_input("What do you say?")
+    choice = raw_input(">")
     process(choice)
 #TSwift Responses
     if choice == "1" and Toon == "Taylor Swift":
@@ -216,10 +219,12 @@ def sit1_2():
     print
     wrap(""""Next situation," Digresses Commander Sheperd "You're giving a presentation for a meeting at your job. Throughout the meeting, the one of your male coworkers is being a bit...distracting. It's very disruptive to your presentation. How do you handle this situation?" """)
     print
+    #time.sleep(7)
+    pause = raw_input("Press ENTER to continue")
     for choice in sit1Choices2:
         wrap(choice)
         print
-    choice = raw_input("How do you respond?")
+    choice = raw_input(">")
     process(choice)
     if choice == "1" and Toon == "Taylor Swift":
         print
