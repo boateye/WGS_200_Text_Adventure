@@ -25,11 +25,14 @@ list_of_avatars = [
 # Choices are going to be universal in all situations. However, responses to said choices will differnt depending on the selected toon. This should cut down on development time, and provice a deeper message.
 sit1Choices = [
               "1. I think that I'd be able to provide excellent moral support to our troops.",
-              "2. Controlling those unmanned drones is like playing a video game, right?",
-              "3. I've seen Tropic Thunder, and I know I'm better prepared than THOSE guys!"]
+              "2. Controlling those unmanned drones is like playing a video game, right?"]
+              #"3. I've seen Tropic Thunder, and I know I'm better prepared than THOSE guys!"
 sit1Choices2 = [
                 "1. I would tell him that if they don't want to be in the meeting, then they can leave, becasue they are distracting, not only me, but their coworkers",
                 "2. People only do that for attention, so if I don't give him any during the meeting, then he should settle down. Ergo, I'd try to continue with the meeting, and, afterwards, I'de to talk afterwards." ]
+sit2Choices = [
+               "1. 10oz. T Bone Steak Dinner"
+               "2. Soup & Salad special"] 
 
 # Text String Variables
 Toon = ""
@@ -102,12 +105,14 @@ def chooseavatar():
     process(choice)
     global Toon
     if choice == "1":
+        os.system("cls")
         print ""
         print "Greetings Ms. Swift!"
         print ""
         Toon = "Taylor Swift"
         sit1()
     elif choice == "2":
+        os.system("cls")
         print ""
         print "Salutations, Mr. Evans!"
         print ""
@@ -142,6 +147,7 @@ def sit1():
     process(choice)
 #TSwift Responses
     if choice == "1" and Toon == "Taylor Swift":
+       os.system("cls")
        print 
        wrap(""""I agree. Many troops, like yourself, excel in the supportive roles. Not everyone is fit for combat, you know," Sheperd states.""")
        print 
@@ -152,9 +158,12 @@ def sit1():
        wrap(""""Why?" """) 
        print 
        wrap(""""Because, you'd be a distraction for your fellow troops." """) 
-       print 
+       print
+       pause = raw_input("Press ENTER to continue")
+       os.system("cls") 
        sit1_2()
     elif choice == "2" and Toon == "Taylor Swift":
+        os.system("cls")
         print""
         print """"Pretty much. Did your brother teach you how to play those games?" """
         print ""
@@ -166,6 +175,8 @@ def sit1():
         print ""
         print """I find that hard to believe, but anyway..." """
         print""
+        pause = raw_input("Press ENTER to continue")
+        os.system("cls")
         sit1_2()
     elif choice == "3" and Toon == "Taylor Swift":
         wrap(""""Everyone is more prepared than those men." """)
@@ -178,9 +189,12 @@ def sit1():
         print ""
         wrap(""""Please leave, Ms. Swift. You're just unfit for this war." """)
         print ""
+        pause = raw_input("Press ENTER to continue")
+        os.system("cls")
         sit1_2()
 #CEvans Responses
     elif choice == "1" and Toon == "Chris Evans":
+        os.system("cls")
         print
         wrap(""""And you probably would. However, don't you think that you'd be a better fit on the front lines?" """)
         print
@@ -191,14 +205,19 @@ def sit1():
         wrap(""""Yea. I cut my knee last week, and fainted. Luckily, my roomate found me bleeding on the floor and passed out. I woke up, cleaned and with a band aid on my knee. It has Captain america on it!" """)
         print 
         wrap(""""That's a good film" """)
+        pause = raw_input("Press ENTER to continue")
+        os.system("cls")
         sit1_2()
     elif choice == "2" and Toon == "Chris Evans":
+        os.system("cls")
         print
         wrap(""""Basically. It's like playing a deadlier version of Microsoft Flight Simulator" """)
         print
         wrap(""""Oh yea I played that. I'm more of a Call of duty guy, though." """)
         print 
         wrap(""""Well there's no respawning in this, just keep that in mind, haha" """)
+        pause = raw_input("Press ENTER to continue")
+        os.system("cls")
         sit1_2()
     elif choice == "3" and Toon == "Chris Evans":
         print
@@ -213,6 +232,8 @@ def sit1():
         wrap(""""Yes, but that kind of talk is not appropriate for someone who will be representing our country" """)
         print
         wrap(""""Sorry." """)
+        pause = raw_input("Press ENTER to continue")
+        os.system("cls")
         sit1_2()
 # Part 2 of the drafting situation
 def sit1_2():
@@ -221,19 +242,21 @@ def sit1_2():
     print
     #time.sleep(7)
     pause = raw_input("Press ENTER to continue")
+    print
     for choice in sit1Choices2:
         wrap(choice)
         print
     choice = raw_input(">")
     process(choice)
     if choice == "1" and Toon == "Taylor Swift":
+        os.system("cls")
+        wrap(""""There are going to be a lot of distractions, Miss Swift. A good skill to have would be to not fall into any temptations of the outside world and continue with your duties, disregarding any diverging noise." """)
         print
-        wrap(""""Interesting. However, don't you think that's a bit...direct?" """)
+        wrap(""""I just think it’s important that we tackle issues at hand and try to create a healthy work atmosphere and I believe that being direct and assertive would be the proper way to handle any disruptions." """)
         print
-        wrap(""""Yes, because he was being disruptive.  It needs to be nipped in the bud." """)
-        print
-        wrap(""""True, but it might be better to be a bit gentler. I mean, you want people to take you seriously." """)
+        wrap(""""I don’t think that would be considered proper etiquette." """)
     elif choice == "2" and Toon == "Taylor Swift":
+        os.system("cls")
         print
         wrap(""""That's probably a good idea. You don't want to put yourself in danger." """)
         print
@@ -241,17 +264,43 @@ def sit1_2():
         print
         wrap(""""I mean, you made a safe choice. He's proably bigger than you, anyway." """)
     elif choice == "1" and Toon == "Chris Evans":
+        os.system("cls")
         print
         wrap(""""That's a good way to deal with the situation. It shows great leadership!" """)
     elif choice == "2" and Toon == "Chris Evans":
+        os.system("cls")
         print
         wrap(""""That's an...intersting response. Don't get me wrong, your coworker is probably doing it for attention, but you shouldn't let him detract from your presentation." """)
         print
         wrap(""""In my experience, either other people will admonish the disruptive person, or their activity will deflate once you deprive them of attention." """)
         print
         wrap(""""How about a more direct approach? I mean, you want to be good leader, don't you? Besides, people will lsiten to you." """) 
-
-
+# Situation 3 
+def sit2():
+    print
+    wrap(""""That being said," concluides Commander Sheperd,"I'm going to have to consult with my superiors about your ability to serve your country. We will be contacting you within the next 10-15 business days. Thank you for coming in." """")
+    print
+    wrap(""""Thank you for your time." You reply, shaking their hand. After you leave, your best friend calls you and asks if you want to grab dinner. You agree, and meet up at the local Mel's Diner later on that day.""")
+    print
+    wrap("""Mel's is packed at this time of night. People are coming in, after attending a happy hour elsewhere, looking for something greasy to soak up the alcohol coarsing through their systems. You find your friend,a dn your'e both seated after about a 30 minute wait.""")
+    print
+    wrap("""You make small talk as you peruse the menu. It's been a while since you've seen your friend last. School, and finals have gotten in the way. Your server shows up asn asks for your order. You've narrowed it down to the following two choices:""")
+    for item in sit2Choices:
+        print item
+        print
+    choice = raw_input(">")
+    process(choice)
+    if choice == "1" and Toon == "Taylor Swift":
+        print
+        wrap(""""A bit hungry are we? How would you like it cooked?" your server inquires, surprisedly.""")
+        print
+        wrap(""""Medium Rare, please" """)
+        print
+        wrap(""""Very well." """)
+        print
+        wrap(""" After takinng your friend's order of a roasted chicken, your server leaves. Then your friend turns to you and says, "Steak? Are you no longer watching what you eat?" """)
+        print
+        wrap(""""Um, I don’t know... I’m just really hungry today, I guess." """)
     
 #Game starts here
 start()
