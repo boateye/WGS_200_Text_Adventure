@@ -71,12 +71,14 @@ def process(command):
     elif command == "reset":
         os.system('cls' if os.name == 'nt' else 'clear')
         start()
-    elif len(command) >= 1:
+    elif len(command) >= 1 and (command == "1" or command == "2"):
        return command
-# if the user inputs either nothing or 
+# if the user inputs either nothing or an invalid command
     else:
         print "%s is not a valid command" % command
-        process(choice)
+        command = raw_input(">")
+        str(command)
+        process(command)
         #input()
 
 #a function that asks the user for inputv (i don't think this is necesary, since i created a  process(command) function
@@ -373,8 +375,6 @@ def sit2():
 
 def end():
     os.system('cls' if os.name == 'nt' else 'clear')
-
-
     print
     wrap("""The rest of the dinner goes pretty smoothly. You're best friends, after all. After catching up for the next couple hours, you split the bill and part ways.""")
     print
