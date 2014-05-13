@@ -182,20 +182,20 @@ def sit1():
         pause = raw_input("Press ENTER to continue")
         os.system('cls' if os.name == 'nt' else 'clear')
         sit1_2()
-    elif choice == "3" and Toon == "Taylor Swift":
-        wrap(""""Everyone is more prepared than those men." """)
-        print""
-        wrap(""""Also, Robert Downey Jr. looked great in that film. then again, does he ever look bad?" """)
-        print ""
-        wrap(""""You're right, he's one handsome man. Anyway, this is not Vietname, nor is it a movie about war. This is a real war, and I don't think that there you'd be a good fit." """)
-        print ""
-        wrap(""""But I can be the dude playing the dude, disguised as another dude!" """)
-        print ""
-        wrap(""""Please leave, Ms. Swift. You're just unfit for this war." """)
-        print ""
-        pause = raw_input("Press ENTER to continue")
-        os.system('cls' if os.name == 'nt' else 'clear')
-        sit1_2()
+#    elif choice == "3" and Toon == "Taylor Swift":
+#       wrap(""""Everyone is more prepared than those men." """)
+#      print""
+#      wrap(""""Also, Robert Downey Jr. looked great in that film. then again, does he ever look bad?" """)
+#        print ""
+#        wrap(""""You're right, he's one handsome man. Anyway, this is not Vietname, nor is it a movie about war. This is a real war, and I don't think that there you'd be a good fit." """)
+#        print ""
+#        wrap(""""But I can be the dude playing the dude, disguised as another dude!" """)
+#        print ""
+#        wrap(""""Please leave, Ms. Swift. You're just unfit for this war." """)
+#        print ""
+#        pause = raw_input("Press ENTER to continue")
+#        os.system('cls' if os.name == 'nt' else 'clear')
+#        sit1_2()
 #CEvans Responses
     elif choice == "1" and Toon == "Chris Evans":
         os.system('cls' if os.name == 'nt' else 'clear')
@@ -224,7 +224,7 @@ def sit1():
         pause = raw_input("Press ENTER to continue")
         os.system('cls' if os.name == 'nt' else 'clear')
         sit1_2()
-    elif choice == "3" and Toon == "Chris Evans":
+#    elif choice == "3" and Toon == "Chris Evans":
         print
         wrap(""""You could be the dude playing the dude, disguised as another dude!" """)
         print
