@@ -71,7 +71,7 @@ def process(command):
     elif command == "reset":
         os.system('cls' if os.name == 'nt' else 'clear')
         start()
-    elif len(command) >= 1 and (command == "1" or command == "2"):
+    elif len(command) >= 1 and (command == "1" or command == "2" or command == "y" or command == "yes" or command =="n" or command == "no"):
        return command
 # if the user inputs either nothing or an invalid command
     else:
@@ -331,9 +331,10 @@ def sit2():
         wrap(""""OK, well as long as you are mindful of how often you eat like this. Once in a while is ok, but this is an unhealthy appetite to support." """)
         pause = raw_input("Press ENTER to continue.")
         str(pause)
-        if pause == "3":
+        if pause == "1":
             os.system('cls' if os.name == 'nt' else 'clear')
             wrap("""Aghast at your friend\'s audacious judgement, you snatch your friend\'s weave, hold it in the air, drop the mic, and make your exit.""")
+            pause = raw_input("Press ENTER to continue.")
         end()
     if choice == "2" and Toon == "Taylor Swift":
         os.system('cls' if os.name == 'nt' else 'clear')
@@ -351,7 +352,7 @@ def sit2():
         print
         wrap(""""Medium rare." """)
         print
-        wrap(""""Yeah, man! Hookin? it up. I?ll get one myself, cooked the same way." """)
+        wrap(""""Yeah, man! Hookin? it up. I\'ll get one myself, cooked the same way." """)
         print
         wrap(""""Well, this is what I always order. I love the way this place makes it. And you know I gotta keep my protein intake up." """)
         print
@@ -368,9 +369,10 @@ def sit2():
         wrap(""""That doesn't mean you have to starve yourself, though!" Your friend turns to your server and says, "I'll have the steak, medium rare," they turn back to face you, and playfully smirks, "for starters." """)
         pause = raw_input("Press ENTER to continue.")
         str(pause)
-        if pause == "3":
+        if pause == "2":
             os.system('cls' if os.name == 'nt' else 'clear')
             wrap("""You swiftly punch your friend in their smug ass face, and walk away becasue cool guys don\'t look back""")
+            pause = raw_input("Press ENTER to continue.")
         end()
 
 def end():
