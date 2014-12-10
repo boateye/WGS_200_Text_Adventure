@@ -52,6 +52,7 @@ def wrap(string):
     
     for z in y:
         print z
+    print
 
 # a function that defines how the game process input stored as the variable: 'command'
 def process(command):
@@ -71,7 +72,7 @@ def process(command):
     elif command == "reset":
         os.system('cls' if os.name == 'nt' else 'clear')
         start()
-    elif len(command) >= 1 and (command == "1" or command == "2"):
+    elif len(command) >= 1 and (command == "1" or command == "2" or command == "y" or command == "yes" or command =="n" or command == "no"):
        return command
 # if the user inputs either nothing or an invalid command
     else:
@@ -91,10 +92,11 @@ def process(command):
 #defines a function that will initialize the game
 
 def start():
-    for pregameLine in pregame_paragraph:
-        wrap(pregameLine)  
-    print ""
+    #for pregameLine in pregame_paragraph:
+    #    wrap(pregameLine)  
+    #print ""
     #time.sleep(7)
+    wrap(pregame)
     pause = raw_input("Press ENTER to continue")
     print "Before we start, please choose your character:"
     print ""
@@ -182,20 +184,20 @@ def sit1():
         pause = raw_input("Press ENTER to continue")
         os.system('cls' if os.name == 'nt' else 'clear')
         sit1_2()
-    elif choice == "3" and Toon == "Taylor Swift":
-        wrap(""""Everyone is more prepared than those men." """)
-        print""
-        wrap(""""Also, Robert Downey Jr. looked great in that film. then again, does he ever look bad?" """)
-        print ""
-        wrap(""""You're right, he's one handsome man. Anyway, this is not Vietname, nor is it a movie about war. This is a real war, and I don't think that there you'd be a good fit." """)
-        print ""
-        wrap(""""But I can be the dude playing the dude, disguised as another dude!" """)
-        print ""
-        wrap(""""Please leave, Ms. Swift. You're just unfit for this war." """)
-        print ""
-        pause = raw_input("Press ENTER to continue")
-        os.system('cls' if os.name == 'nt' else 'clear')
-        sit1_2()
+#    elif choice == "3" and Toon == "Taylor Swift":
+#       wrap(""""Everyone is more prepared than those men." """)
+#      print""
+#      wrap(""""Also, Robert Downey Jr. looked great in that film. then again, does he ever look bad?" """)
+#        print ""
+#        wrap(""""You're right, he's one handsome man. Anyway, this is not Vietname, nor is it a movie about war. This is a real war, and I don't think that there you'd be a good fit." """)
+#        print ""
+#        wrap(""""But I can be the dude playing the dude, disguised as another dude!" """)
+#        print ""
+#        wrap(""""Please leave, Ms. Swift. You're just unfit for this war." """)
+#        print ""
+#        pause = raw_input("Press ENTER to continue")
+#        os.system('cls' if os.name == 'nt' else 'clear')
+#        sit1_2()
 #CEvans Responses
     elif choice == "1" and Toon == "Chris Evans":
         os.system('cls' if os.name == 'nt' else 'clear')
@@ -224,7 +226,7 @@ def sit1():
         pause = raw_input("Press ENTER to continue")
         os.system('cls' if os.name == 'nt' else 'clear')
         sit1_2()
-    elif choice == "3" and Toon == "Chris Evans":
+#    elif choice == "3" and Toon == "Chris Evans":
         print
         wrap(""""You could be the dude playing the dude, disguised as another dude!" """)
         print
@@ -331,9 +333,10 @@ def sit2():
         wrap(""""OK, well as long as you are mindful of how often you eat like this. Once in a while is ok, but this is an unhealthy appetite to support." """)
         pause = raw_input("Press ENTER to continue.")
         str(pause)
-        if pause == "3":
+        if pause == "1":
             os.system('cls' if os.name == 'nt' else 'clear')
             wrap("""Aghast at your friend\'s audacious judgement, you snatch your friend\'s weave, hold it in the air, drop the mic, and make your exit.""")
+            pause = raw_input("Press ENTER to continue.")
         end()
     if choice == "2" and Toon == "Taylor Swift":
         os.system('cls' if os.name == 'nt' else 'clear')
@@ -351,7 +354,7 @@ def sit2():
         print
         wrap(""""Medium rare." """)
         print
-        wrap(""""Yeah, man! Hookin? it up. I?ll get one myself, cooked the same way." """)
+        wrap(""""Yeah, man! Hookin? it up. I\'ll get one myself, cooked the same way." """)
         print
         wrap(""""Well, this is what I always order. I love the way this place makes it. And you know I gotta keep my protein intake up." """)
         print
@@ -368,9 +371,10 @@ def sit2():
         wrap(""""That doesn't mean you have to starve yourself, though!" Your friend turns to your server and says, "I'll have the steak, medium rare," they turn back to face you, and playfully smirks, "for starters." """)
         pause = raw_input("Press ENTER to continue.")
         str(pause)
-        if pause == "3":
+        if pause == "2":
             os.system('cls' if os.name == 'nt' else 'clear')
-            wrap("""You swiftly punch your friend in their smug ass face, and walk away becasue cool guys don\'t look back""")
+            wrap("""You swiftly punch your friend in their smug ass face, and walk away becasue cool guys don\'t look back.""")
+            pause = raw_input("Press ENTER to continue.")
         end()
 
 def end():
